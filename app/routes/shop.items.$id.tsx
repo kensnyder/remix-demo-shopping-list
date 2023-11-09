@@ -1,4 +1,4 @@
-import { ActionFunctionArgs } from '@remix-run/node';
+import { ActionFunctionArgs, redirect } from '@remix-run/node';
 
 import { items } from './shop.items';
 
@@ -19,5 +19,5 @@ export async function action({ request, params }: ActionFunctionArgs) {
     }
   }
 
-  return null;
+  return redirect('/shop/items');
 }
